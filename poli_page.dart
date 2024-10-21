@@ -30,13 +30,22 @@ class _PoliPageState extends State<PoliPage> {
                       builder: (context) => PoliDetail(poli: poliAnak)));
             },
           ),
-          Card(
-            child: Card(
-              child: ListTile(
-                title: const Text("Poli Kandungan"),
+          GestureDetector(
+              child: Card(
+                child: Card(
+                  child: ListTile(
+                    title: const Text("Poli Kandungan"),
+                  ),
+                ),
               ),
+              onTap: () {
+                Poli poliKandungan = new Poli(namaPoli: "Poli Kandungan");
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => PoliDetail(poli: poliKandungan)));
+              },
             ),
-          ),
           Card(
             child: Card(
               child: ListTile(
